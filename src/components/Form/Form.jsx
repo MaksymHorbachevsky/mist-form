@@ -1,5 +1,5 @@
 import './Form.css';
-import {useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 const Form = (props) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -9,24 +9,26 @@ const Form = (props) => {
       <h2 className="form-header"><img alt="Logotype Museum" src="https://mist-next.vercel.app/_next/static/media/museum.25fa7a9e.svg" ></img></h2>
       <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name", { required: true })}
-                placeholder="ПІБ"
+          placeholder="ПІБ"
         />
         {errors.name && <span className="form-error">This field is required</span>}
         <input {...register("email", { required: true })}
-               placeholder="Електронна пошта"
+          placeholder="Електронна пошта"
         />
         {errors.email && <span className="form-error">This field is required</span>}
-        <input {...register("phone", { required: true })}
-               placeholder="Телефон"
+        <input type="tel" {...register("phone", { required: true })}
+          placeholder="Телефон"
         />
         {errors.phone && <span className="form-error">This field is required</span>}
         <textarea {...register("details", { required: true })}
-               placeholder="Ваші побажання"
-                  rows="3"
+          placeholder="Ваші побажання"
+          rows="3"
         />
         {errors.details && <span className="form-error">This field is required</span>}
+        <input type="checkbox" id="agree" {...register("agree", { required: true })} />
+        <label for="agree">Даю згоду на обробку персональних даних</label>
+        {errors.agree && <span className="form-error">This field is required</span>}
         <input type="submit" />
-
       </form>
     </div>
   );
