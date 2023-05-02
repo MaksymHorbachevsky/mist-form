@@ -1,24 +1,42 @@
-.form-wrapper{
-    max-width: 500px;
-    border: 1px solid black;
-    margin: 0 auto;
+@font-face {
+    font-family: Daikon;
+    src: url(https://mist-next.vercel.app/_next/static/media/Daikon-Regular.ba81ac23.otf) format("opentype");
+    font-display: swap
 }
 
-.main-form{
+.form-wrapper {
+    max-width: 500px;
+    border: 2px solid black;
+    margin: 0 auto;
+    font-family: Daikon;
+    padding: 30px 20px;
+}
+
+.main-form {
     padding: 10px;
 }
 
 .main-form input,
-.main-form textarea{
+.main-form textarea {
     width: 100%;
     padding: 5px;
     margin-top: 10px;
     font-size: 16px;
+    font-family: Daikon;
 }
 
-.form-error{
+.main-form input[type="checkbox"] {
+    width: auto;
+}
+
+.main-form label {
+    font-size: 12px;
+}
+
+.form-error {
     color: red;
 }
-.form-header{
+
+.form-header {
     text-align: center;
 }
