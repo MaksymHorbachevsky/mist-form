@@ -17,7 +17,7 @@ const Form = (props) => {
         <input type="email" {...register("email", {
           required: "Це поле є обов'язковим", pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-            message: "Неправильний адрес електроної пошти"
+            message: "Неправильна адреса електронної пошти"
           }
         })}
                placeholder="Електронна пошта"
