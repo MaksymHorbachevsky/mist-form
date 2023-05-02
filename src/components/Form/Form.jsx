@@ -9,15 +9,15 @@ const Form = (props) => {
       <h2 className="form-header"><img alt="Logotype Museum" src="https://mist-next.vercel.app/_next/static/media/museum.25fa7a9e.svg" ></img></h2>
       <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name", { required: true })}
-                placeholder="Ваше ім'я*"
+                placeholder="ПІБ*"
         />
         {errors.name && <span className="form-error">This field is required</span>}
         <input {...register("email", { required: true })}
-               placeholder="Ваша електронна пошта*"
+               placeholder="Електронна пошта*"
         />
         {errors.email && <span className="form-error">This field is required</span>}
         <input {...register("phone", { required: true })}
-               placeholder="Ваш телефон*"
+               placeholder="Телефон*"
         />
         {errors.phone && <span className="form-error">This field is required</span>}
         <textarea {...register("details", { required: true })}
