@@ -41,3 +41,8 @@
 .form-header {
     text-align: center;
 }
+
+.form-header img {
+    user-drag: none;
+    -webkit-user-drag: none;
+}
