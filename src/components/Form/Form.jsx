@@ -24,7 +24,7 @@ const Form = (props) => {
                placeholder="Ваші побажання"
                   rows="3"
         />
-        {errors.phone && <span className="form-error">This field is required</span>}
+        {errors.details && <span className="form-error">This field is required</span>}
         <input type="submit" />
 
       </form>
