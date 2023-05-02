@@ -6,7 +6,7 @@ const Form = (props) => {
   const onSubmit = data => console.log(data);
   return (
     <div className="form-wrapper">
-      <h2 className="form-header">MIST</h2>
+      <h2 className="form-header"><img alt="Logotype Museum" src="https://mist-next.vercel.app/_next/static/media/museum.25fa7a9e.svg" ></img></h2>
       <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
         <input {...register("name", { required: true })}
                 placeholder="Ваше ім'я*"
