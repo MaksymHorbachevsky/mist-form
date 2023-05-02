@@ -11,23 +11,23 @@ const Form = (props) => {
         <input {...register("name", { required: true })}
           placeholder="ПІБ"
         />
-        {errors.name && <span className="form-error">This field is required</span>}
+        {errors.name && <span className="form-error">Це поле є обов'язковим для заповнення</span>}
         <input {...register("email", { required: true })}
           placeholder="Електронна пошта"
         />
-        {errors.email && <span className="form-error">This field is required</span>}
+        {errors.email && <span className="form-error">Це поле є обов'язковим для заповнення</span>}
         <input type="tel" {...register("phone", { required: true })}
           placeholder="Телефон"
         />
-        {errors.phone && <span className="form-error">This field is required</span>}
+        {errors.phone && <span className="form-error">Це поле є обов'язковим для заповнення</span>}
         <textarea {...register("details", { required: true })}
           placeholder="Ваші побажання"
           rows="3"
         />
-        {errors.details && <span className="form-error">This field is required</span>}
+        {errors.details && <div className="form-error">Це поле є обов'язковим для заповнення</div>}
         <input type="checkbox" id="agree" {...register("agree", { required: true })} />
         <label for="agree">Даю згоду на обробку персональних даних</label>
-        {errors.agree && <span className="form-error">This field is required</span>}
+        {errors.agree && <div className="form-error">Надайте згоду на обробку персональних даних, щоб надіслати форму</div>}
         <input type="submit" />
       </form>
     </div>
