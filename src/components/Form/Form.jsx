@@ -8,8 +8,24 @@ const Form = (props) => {
     <div className="form-wrapper">
       <h2 className="form-header">MIST</h2>
       <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("exampleRequired", { required: true })} />
-        {errors.exampleRequired && <span>This field is required</span>}
+        <input {...register("name", { required: true })}
+                placeholder="Ваше ім'я*"
+        />
+        {errors.name && <span className="form-error">This field is required</span>}
+        <input {...register("email", { required: true })}
+               placeholder="Ваша електронна пошта*"
+        />
+        {errors.email && <span className="form-error">This field is required</span>}
+        <input {...register("phone", { required: true })}
+               placeholder="Ваш телефон*"
+        />
+        {errors.phone && <span className="form-error">This field is required</span>}
+        <textarea {...register("details", { required: true })}
+               placeholder="Ваші побажання"
+                  rows="3"
+
+        />
+        {errors.phone && <span className="form-error">This field is required</span>}
         <input type="submit" />
 
       </form>
