@@ -7,8 +7,8 @@
 .form-wrapper {
     max-width: 500px;
     border: 2px solid black;
-    margin: 0 auto;
-    font-family: Daikon;
+    margin: 50px auto;
+    font-family: Daikon, sans-serif;
     padding: 30px 20px;
 }
 
@@ -22,7 +22,7 @@
     padding: 5px;
     margin-top: 10px;
     font-size: 16px;
-    font-family: Daikon;
+    font-family: Daikon, sans-serif;
 }
 
 .main-form input[type="checkbox"] {
