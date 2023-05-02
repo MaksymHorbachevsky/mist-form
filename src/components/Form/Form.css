@@ -1,0 +1,19 @@
+.form-wrapper{
+    width: 500px;
+    height: 800px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.main-form{
+    padding: 10px;
+}
+
+.main-form input{
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+}
+.form-header{
+    text-align: center;
+}
