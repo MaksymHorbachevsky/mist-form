@@ -27,15 +27,12 @@ const Form = (props) => {
                placeholder="Телефон"
         />
         {errors.phone && <span className="form-error">Це поле є обов'язковим для заповнення</span>}
-        <textarea {...register("details", {required: true})}
+        <textarea {...register("details")}
                   placeholder="Ваші побажання"
                   rows="3"
         />
-        {errors.details && <div className="form-error">Це поле є обов'язковим для заповнення</div>}
-        <input type="checkbox" id="agree" {...register("agree", {required: true})} />
+        <input type="checkbox" id="agree" required />
         <label htmlFor="agree">Даю згоду на обробку персональних даних</label>
-        {errors.agree &&
-          <div className="form-error">Надайте згоду на обробку персональних даних, щоб надіслати форму</div>}
         <input type="submit"/>
       </form>
     </div>
