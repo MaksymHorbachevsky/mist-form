@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import {useState} from "react";
 
 const Form = (props) => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [message,setMessage] = useState("");
   const submitHandler = (data) => {
     const formData = new FormData();
@@ -19,6 +19,7 @@ const Form = (props) => {
       .then(res => res.text())
       .then(responseData => {
         setMessage(responseData)
+        reset()
       });
   };
   return (
