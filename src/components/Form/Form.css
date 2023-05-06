@@ -45,3 +45,8 @@
 .form-header img {
     -webkit-user-drag: none;
 }
+
+.success{
+    color: green;
+    text-align: center;
+}
