@@ -23,20 +23,25 @@ const Form = (props) => {
         <input type="text" {...register("Name", { required: true })}
           placeholder="ПІБ"
         />
-        {errors.name && <span className="form-error">Це поле є обов'язковим для заповнення</span>}
+        {errors.Name && <span className="form-error">Це поле є обов'язковим для заповнення</span>}
         <input type="email" {...register("Email", {
-          required: "Це поле є обов'язковим", pattern: {
+          required: "Це поле є обов'язковим для заповнення", pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
             message: "Неправильна адреса електронної пошти"
           }
         })}
           placeholder="Електронна пошта"
         />
-        {errors.email && <span className="form-error">{errors.email.message}</span>}
-        <input type="tel" {...register("Phone", { required: true })}
+        {errors.Email && <span className="form-error">{errors.Email.message}</span>}
+        <input type="tel" {...register("Phone", {
+          required: "Це поле є обов'язковим для заповнення", pattern: {
+            value: /^([0-9]{12})$/,
+            message: "Номер телефону має містити 12 цифр"
+          }
+        })}
           placeholder="Телефон"
         />
-        {errors.phone && <span className="form-error">Це поле є обов'язковим для заповнення</span>}
+        {errors.Phone && <span className="form-error">{errors.Phone.message}</span>}
         <textarea {...register("Description")}
           placeholder="Ваші побажання"
           rows="3"
