@@ -1,25 +1,31 @@
 import './Form.css';
 import { useForm } from "react-hook-form";
+import {useState} from "react";
 
 const Form = (props) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = () => {
-    const form = document.querySelector('form');
+  const [message,setMessage] = useState("");
+  const submitHandler = (data) => {
+    const formData = new FormData();
+    formData.append("Name", data.Name);
+    formData.append("Email", data.Email);
+    formData.append("Phone", data.Phone);
+    formData.append("Description", data.Description);
+
     fetch("https://script.google.com/macros/s/AKfycbwXmPyuGYZl1xJJRVKiGuB9gLgRWMtISlWrZzYXaZllY-vgfQWyMWUGpct_y6FW1YDvcw/exec", {
       method: "POST",
-      body: new FormData(form)
+      body: formData
     })
       .then(res => res.text())
-      .then(data => {
-        document.getElementsByClassName("success")[0].innerHTML = data;
-        form.reset();
+      .then(responseData => {
+        setMessage(responseData)
       });
   };
   return (
     <div className="form-wrapper">
       <h2 className="form-header"><img alt="Logotype Museum" src="https://mist-next.vercel.app/_next/static/media/museum.25fa7a9e.svg"></img></h2>
-      <p className="success"></p>
-      <form className="main-form" onSubmit={handleSubmit(onSubmit)}>
+      {message && <p className="success">{message}</p>}
+      <form className="main-form" onSubmit={handleSubmit(submitHandler)}>
         <input type="text" {...register("Name", { required: true })}
           placeholder="ПІБ"
         />
