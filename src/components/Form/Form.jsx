@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import {useState} from "react";
 
 const Form = (props) => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({mode: "onTouched"});
   const [message,setMessage] = useState("");
   const submitHandler = (data) => {
     const formData = new FormData();
