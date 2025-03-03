@@ -9,6 +9,7 @@ This is a feedback form created for the **National Museum of the History of Ukra
 - Styled using custom fonts and CSS
 
 ## Technologies Used
+- **JavaScript** - сore language
 - **React** (Create React App)
 - **React Hook Form** for form handling
 - **CSS** for styling
