@@ -14,3 +14,7 @@ This is a feedback form created for the **National Museum of the History of Ukra
 - **React Hook Form** for form handling
 - **CSS** for styling
 - **Google Apps Script** for backend data processing
+
+## Deployment
+The project is deployed and accessible at:
+[Live Demo](https://maksymhorbachevsky.github.io/mist-form/)
